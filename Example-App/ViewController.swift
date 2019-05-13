@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     lazy var imageView:UIImageView = {
         let v = UIImageView(frame: .zero)
-        v.contentMode = .scaleAspectFill
+        v.contentMode = .scaleAspectFit
         v.clipsToBounds = true
         return v
     }()
@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         view.addSubview(buton)
         buton.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buton2)
+        buton2.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
@@ -49,7 +51,11 @@ class ViewController: UIViewController {
             buton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
             buton.widthAnchor.constraint(equalToConstant: 300),
             buton.heightAnchor.constraint(equalToConstant: 40),
-            buton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            buton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:10),
+            buton2.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            buton2.widthAnchor.constraint(equalToConstant: 300),
+            buton2.heightAnchor.constraint(equalToConstant: 40),
+            buton2.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-10)
         ])
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -63,8 +69,12 @@ class ViewController: UIViewController {
     @objc func resize(){
         guard let image = imageView.image else {return}
         let el = Elysium(source: image)
-        let img = el.makeScaledImage(.average)
-        print("The The New image size is: \(img.jpegData(compressionQuality: 1)!.count)")
+        if let img = el.makeStandardImage(image){
+           print("The The New image size is: \(img.jpegData(compressionQuality: 1)!.count)")
+            imageView.image = img
+        }
+        
+        
     }
 
 

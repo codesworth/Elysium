@@ -23,9 +23,11 @@ public class Elysium{
     
     public init(source:UIImage) {
         sourceImage = source
+        print("Image dimens is: \(source.size.width) X \(source.size.height)")
     }
 
-    func makeScaledTo(_ quality:ImageQuality)->UIImage?{
+    func makeScaledTo(_ quality:ImageQuality,_ sourceImage:UIImage)->UIImage?{
+        //let sourceImage = sourceImage ?? self.sourceImage
         let quality = quality > 1 ? 1 : max(quality,0.0001)
         //Create Source Buffer
 
@@ -69,8 +71,18 @@ public class Elysium{
         return scaledImage
     }
     
-    public func makeScaledImage(_ quality:Quality)->UIImage?{
-        return makeScaledTo(quality.rawValue)
+    public func makeScaledImage(_ quality:Quality,image:UIImage)->UIImage?{
+        return makeScaledTo(quality.rawValue,image)
+    }
+    
+    public func makeStandardImage(_ image:UIImage)->UIImage?{
+        if let image = makeScaledTo(0.5,image){
+            if image.size.area > standardQaulity{
+                return makeStandardImage(image)
+            }
+            return image
+        }
+        return nil
     }
     
     public func generateThumbnailImage()->UIImage?{
@@ -90,6 +102,10 @@ public extension Elysium{
     
     typealias ImageQuality = CGFloat
     
+    var standardQaulity:CGFloat{
+        return 720 * 1280
+    }
+    
     public enum Quality:ImageQuality {
         case max = 1
         case min = 0.05
@@ -103,6 +119,7 @@ public extension Elysium{
 
 
 extension CGSize{
+    
     
     var area:CGFloat{
         return width * height
