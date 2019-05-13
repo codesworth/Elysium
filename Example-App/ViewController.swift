@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Elysium
+import  Elysium
 
 class ViewController: UIViewController {
     
@@ -61,7 +61,10 @@ class ViewController: UIViewController {
     }
     
     @objc func resize(){
-        
+        guard let image = imageView.image else {return}
+        let el = Elysium(source: image)
+        let img = el.makeScaledImage(.average)
+        print("The The New image size is: \(img.jpegData(compressionQuality: 1)!.count)")
     }
 
 
