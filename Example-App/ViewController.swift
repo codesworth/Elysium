@@ -69,8 +69,8 @@ class ViewController: UIViewController {
     @objc func resize(){
         guard let image = imageView.image else {return}
         let el = Elysium(source: image)
-        if let img = el.makeStandardImage(image){
-           print("The The New image size is: \(img.jpegData(compressionQuality: 1)!.count)")
+        if let img = el.transformImage(){
+           print("The The New image size is: \(img.size)")
             imageView.image = img
         }
         

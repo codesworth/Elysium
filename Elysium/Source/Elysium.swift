@@ -94,6 +94,14 @@ public class Elysium{
         return scaled
     }
     
+    public func transformImage()->UIImage?{
+        if let data = sourceImage.jpegData(compressionQuality: 0.5){
+            print("ImageJPEG size is \(data.count)")
+            return UIImage(data: data)
+        }
+        return nil
+    }
+    
     
 }
 
