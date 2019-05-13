@@ -11,6 +11,12 @@
 		38FCD7EA228A008A001778D2 /* ElysiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD7E9228A008A001778D2 /* ElysiumTests.swift */; };
 		38FCD7EC228A008A001778D2 /* Elysium.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FCD7DE228A008A001778D2 /* Elysium.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38FCD7F7228A00E4001778D2 /* Elysium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD7F6228A00E4001778D2 /* Elysium.swift */; };
+		38FCD7FF228A0CD0001778D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD7FE228A0CD0001778D2 /* AppDelegate.swift */; };
+		38FCD801228A0CD0001778D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD800228A0CD0001778D2 /* ViewController.swift */; };
+		38FCD804228A0CD0001778D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FCD802228A0CD0001778D2 /* Main.storyboard */; };
+		38FCD806228A0CD3001778D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FCD805228A0CD3001778D2 /* Assets.xcassets */; };
+		38FCD809228A0CD3001778D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FCD807228A0CD3001778D2 /* LaunchScreen.storyboard */; };
+		38FCD814228A0CD3001778D2 /* Example_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD813228A0CD3001778D2 /* Example_AppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +26,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 38FCD7DA228A008A001778D2;
 			remoteInfo = Elysium;
+		};
+		38FCD810228A0CD3001778D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38FCD7D2228A008A001778D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38FCD7FB228A0CD0001778D2;
+			remoteInfo = "Example-App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -31,6 +44,16 @@
 		38FCD7E9228A008A001778D2 /* ElysiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElysiumTests.swift; sourceTree = "<group>"; };
 		38FCD7EB228A008A001778D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38FCD7F6228A00E4001778D2 /* Elysium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elysium.swift; sourceTree = "<group>"; };
+		38FCD7FC228A0CD0001778D2 /* Example-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FCD7FE228A0CD0001778D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38FCD800228A0CD0001778D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38FCD803228A0CD0001778D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38FCD805228A0CD3001778D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38FCD808228A0CD3001778D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38FCD80A228A0CD3001778D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FCD80F228A0CD3001778D2 /* Example-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FCD813228A0CD3001778D2 /* Example_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_AppTests.swift; sourceTree = "<group>"; };
+		38FCD815228A0CD3001778D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +72,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38FCD7F9228A0CD0001778D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FCD80C228A0CD3001778D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -57,6 +94,8 @@
 			children = (
 				38FCD7DD228A008A001778D2 /* Elysium */,
 				38FCD7E8228A008A001778D2 /* ElysiumTests */,
+				38FCD7FD228A0CD0001778D2 /* Example-App */,
+				38FCD812228A0CD3001778D2 /* Example-AppTests */,
 				38FCD7DC228A008A001778D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +105,8 @@
 			children = (
 				38FCD7DB228A008A001778D2 /* Elysium.framework */,
 				38FCD7E4228A008A001778D2 /* ElysiumTests.xctest */,
+				38FCD7FC228A0CD0001778D2 /* Example-App.app */,
+				38FCD80F228A0CD3001778D2 /* Example-AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +136,28 @@
 				38FCD7F6228A00E4001778D2 /* Elysium.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		38FCD7FD228A0CD0001778D2 /* Example-App */ = {
+			isa = PBXGroup;
+			children = (
+				38FCD7FE228A0CD0001778D2 /* AppDelegate.swift */,
+				38FCD800228A0CD0001778D2 /* ViewController.swift */,
+				38FCD802228A0CD0001778D2 /* Main.storyboard */,
+				38FCD805228A0CD3001778D2 /* Assets.xcassets */,
+				38FCD807228A0CD3001778D2 /* LaunchScreen.storyboard */,
+				38FCD80A228A0CD3001778D2 /* Info.plist */,
+			);
+			path = "Example-App";
+			sourceTree = "<group>";
+		};
+		38FCD812228A0CD3001778D2 /* Example-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				38FCD813228A0CD3001778D2 /* Example_AppTests.swift */,
+				38FCD815228A0CD3001778D2 /* Info.plist */,
+			);
+			path = "Example-AppTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +210,41 @@
 			productReference = 38FCD7E4228A008A001778D2 /* ElysiumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		38FCD7FB228A0CD0001778D2 /* Example-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38FCD816228A0CD3001778D2 /* Build configuration list for PBXNativeTarget "Example-App" */;
+			buildPhases = (
+				38FCD7F8228A0CD0001778D2 /* Sources */,
+				38FCD7F9228A0CD0001778D2 /* Frameworks */,
+				38FCD7FA228A0CD0001778D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example-App";
+			productName = "Example-App";
+			productReference = 38FCD7FC228A0CD0001778D2 /* Example-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38FCD80E228A0CD3001778D2 /* Example-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38FCD819228A0CD3001778D2 /* Build configuration list for PBXNativeTarget "Example-AppTests" */;
+			buildPhases = (
+				38FCD80B228A0CD3001778D2 /* Sources */,
+				38FCD80C228A0CD3001778D2 /* Frameworks */,
+				38FCD80D228A0CD3001778D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38FCD811228A0CD3001778D2 /* PBXTargetDependency */,
+			);
+			name = "Example-AppTests";
+			productName = "Example-AppTests";
+			productReference = 38FCD80F228A0CD3001778D2 /* Example-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,6 +262,13 @@
 					38FCD7E3228A008A001778D2 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					38FCD7FB228A0CD0001778D2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					38FCD80E228A0CD3001778D2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 38FCD7FB228A0CD0001778D2;
+					};
 				};
 			};
 			buildConfigurationList = 38FCD7D5228A008A001778D2 /* Build configuration list for PBXProject "Elysium" */;
@@ -172,6 +277,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 38FCD7D1228A008A001778D2;
 			productRefGroup = 38FCD7DC228A008A001778D2 /* Products */;
@@ -180,6 +286,8 @@
 			targets = (
 				38FCD7DA228A008A001778D2 /* Elysium */,
 				38FCD7E3228A008A001778D2 /* ElysiumTests */,
+				38FCD7FB228A0CD0001778D2 /* Example-App */,
+				38FCD80E228A0CD3001778D2 /* Example-AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +301,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		38FCD7E2228A008A001778D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FCD7FA228A0CD0001778D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FCD809228A0CD3001778D2 /* LaunchScreen.storyboard in Resources */,
+				38FCD806228A0CD3001778D2 /* Assets.xcassets in Resources */,
+				38FCD804228A0CD0001778D2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FCD80D228A0CD3001778D2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,6 +343,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38FCD7F8228A0CD0001778D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FCD801228A0CD0001778D2 /* ViewController.swift in Sources */,
+				38FCD7FF228A0CD0001778D2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FCD80B228A0CD3001778D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FCD814228A0CD3001778D2 /* Example_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -226,7 +368,31 @@
 			target = 38FCD7DA228A008A001778D2 /* Elysium */;
 			targetProxy = 38FCD7E6228A008A001778D2 /* PBXContainerItemProxy */;
 		};
+		38FCD811228A0CD3001778D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38FCD7FB228A0CD0001778D2 /* Example-App */;
+			targetProxy = 38FCD810228A0CD3001778D2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38FCD802228A0CD0001778D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FCD803228A0CD0001778D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38FCD807228A0CD3001778D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FCD808228A0CD3001778D2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		38FCD7ED228A008A001778D2 /* Debug */ = {
@@ -442,6 +608,84 @@
 			};
 			name = Release;
 		};
+		38FCD817228A0CD3001778D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MB46J93Q7Z;
+				INFOPLIST_FILE = "Example-App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codesworth.Example-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38FCD818228A0CD3001778D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MB46J93Q7Z;
+				INFOPLIST_FILE = "Example-App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codesworth.Example-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		38FCD81A228A0CD3001778D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MB46J93Q7Z;
+				INFOPLIST_FILE = "Example-AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codesworth.Example-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-App.app/Example-App";
+			};
+			name = Debug;
+		};
+		38FCD81B228A0CD3001778D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MB46J93Q7Z;
+				INFOPLIST_FILE = "Example-AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codesworth.Example-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example-App.app/Example-App";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -468,6 +712,24 @@
 			buildConfigurations = (
 				38FCD7F3228A008A001778D2 /* Debug */,
 				38FCD7F4228A008A001778D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38FCD816228A0CD3001778D2 /* Build configuration list for PBXNativeTarget "Example-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FCD817228A0CD3001778D2 /* Debug */,
+				38FCD818228A0CD3001778D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38FCD819228A0CD3001778D2 /* Build configuration list for PBXNativeTarget "Example-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FCD81A228A0CD3001778D2 /* Debug */,
+				38FCD81B228A0CD3001778D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

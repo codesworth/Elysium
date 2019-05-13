@@ -10,7 +10,7 @@ import UIKit
 import Accelerate
 import ModelIO
 
-class Elysium{
+public class Elysium{
     
     private var sourceImage:UIImage
     private var cgImage:CGImage{
@@ -21,15 +21,14 @@ class Elysium{
         return UIScreen.main.scale
     }
     
-    init(source:UIImage) {
+    public init(source:UIImage) {
         sourceImage = source
     }
-    
+
     func makeScaledTo(_ quality:ImageQuality)->UIImage?{
         let quality = quality > 1 ? 1 : max(quality,0.0001)
         //Create Source Buffer
-        print("Screen scale is: \(scale)")
-        print("Going with quality: \(quality)")
+
         var format = vImage_CGImageFormat(bitsPerComponent: 8, bitsPerPixel: 32, colorSpace: nil, bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.first.rawValue), version: 0, decode: nil, renderingIntent: CGColorRenderingIntent.defaultIntent)
         var sourceBuff = vImage_Buffer()
         
@@ -70,11 +69,11 @@ class Elysium{
         return scaledImage
     }
     
-    func makeScaledImage(_ quality:Quality)->UIImage?{
+    public func makeScaledImage(_ quality:Quality)->UIImage?{
         return makeScaledTo(quality.rawValue)
     }
     
-    func generateThumbnailImage()->UIImage?{
+    public func generateThumbnailImage()->UIImage?{
         let cfData = NSData(data: sourceImage.jpegData(compressionQuality: 1)!) as CFData
         let options:[NSString:NSObject] = [kCGImageSourceThumbnailMaxPixelSize: max(sourceImage.size.width,sourceImage.size.height) / 2 as NSObject, kCGImageSourceCreateThumbnailFromImageAlways: true as NSObject]
         guard let imageSource = CGImageSourceCreateWithData(cfData,nil) else {return nil}
@@ -82,18 +81,30 @@ class Elysium{
         let scaled = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, options as CFDictionary).flatMap{UIImage(cgImage: $0)}
         return scaled
     }
+    
+    
 }
 
 
-extension Elysium{
+public extension Elysium{
     
     typealias ImageQuality = CGFloat
     
-    enum Quality:ImageQuality {
+    public enum Quality:ImageQuality {
         case max = 1
         case min = 0.05
         case average = 0.5
         case `default` = 0.7
         case low = 0.35
+    }
+    
+    
+}
+
+
+extension CGSize{
+    
+    var area:CGFloat{
+        return width * height
     }
 }
