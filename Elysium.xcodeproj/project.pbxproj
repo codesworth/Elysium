@@ -71,6 +71,7 @@
 		38FCD7DD228A008A001778D2 /* Elysium */ = {
 			isa = PBXGroup;
 			children = (
+				38FCD7F5228A0094001778D2 /* Source */,
 				38FCD7DE228A008A001778D2 /* Elysium.h */,
 				38FCD7DF228A008A001778D2 /* Info.plist */,
 			);
@@ -84,6 +85,13 @@
 				38FCD7EB228A008A001778D2 /* Info.plist */,
 			);
 			path = ElysiumTests;
+			sourceTree = "<group>";
+		};
+		38FCD7F5228A0094001778D2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
