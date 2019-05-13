@@ -10,6 +10,7 @@
 		38FCD7E5228A008A001778D2 /* Elysium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FCD7DB228A008A001778D2 /* Elysium.framework */; };
 		38FCD7EA228A008A001778D2 /* ElysiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD7E9228A008A001778D2 /* ElysiumTests.swift */; };
 		38FCD7EC228A008A001778D2 /* Elysium.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FCD7DE228A008A001778D2 /* Elysium.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38FCD7F7228A00E4001778D2 /* Elysium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FCD7F6228A00E4001778D2 /* Elysium.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		38FCD7E4228A008A001778D2 /* ElysiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElysiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FCD7E9228A008A001778D2 /* ElysiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElysiumTests.swift; sourceTree = "<group>"; };
 		38FCD7EB228A008A001778D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FCD7F6228A00E4001778D2 /* Elysium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elysium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		38FCD7F5228A0094001778D2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				38FCD7F6228A00E4001778D2 /* Elysium.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				TargetAttributes = {
 					38FCD7DA228A008A001778D2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					38FCD7E3228A008A001778D2 = {
 						CreatedOnToolsVersion = 10.1;
@@ -202,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FCD7F7228A00E4001778D2 /* Elysium.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +354,7 @@
 		38FCD7F0228A008A001778D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -366,6 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codesworth.Elysium;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,6 +381,7 @@
 		38FCD7F1228A008A001778D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -399,6 +407,7 @@
 		38FCD7F3228A008A001778D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB46J93Q7Z;
 				INFOPLIST_FILE = ElysiumTests/Info.plist;
@@ -417,6 +426,7 @@
 		38FCD7F4228A008A001778D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB46J93Q7Z;
 				INFOPLIST_FILE = ElysiumTests/Info.plist;
