@@ -95,7 +95,7 @@ public class Elysium{
     }
     
     public func transformImage()->UIImage?{
-        if let data = sourceImage.jpegData(compressionQuality: 0.5){
+        if let data = sourceImage.dataFromJPEG(){
             print("ImageJPEG size is \(data.count)")
             return UIImage(data: data)
         }
@@ -123,6 +123,41 @@ public extension Elysium{
     }
     
     
+    
+    
+}
+
+enum ImageSizes:Int{
+    case supermax = 32000000
+    case max = 16000000
+    case medium = 8000000
+    case min = 4000000
+}
+
+extension UIImage{
+    
+    func dataFromJPEG()-> Data?{
+        var compression:CGFloat = 1
+        if let data = jpegData(compressionQuality: compression){
+            if data.count < ImageSizes.min.rawValue{
+                compression = 0.5
+                return jpegData(compressionQuality: compression)
+            }
+            if data.count < ImageSizes.medium.rawValue{
+                compression = 0.4
+                return jpegData(compressionQuality: compression)
+            }
+            if data.count < ImageSizes.max.rawValue{
+                compression = 0.2
+                return jpegData(compressionQuality: compression)
+            }
+            
+            compression = 0.1
+            return jpegData(compressionQuality: compression)
+            
+        }
+        return nil
+    }
 }
 
 
